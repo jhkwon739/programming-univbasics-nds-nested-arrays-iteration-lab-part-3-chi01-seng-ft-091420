@@ -6,7 +6,13 @@ def join_nested_strings(src)
   while row_index < src.count do
     element_index = 0 
     while element_index < src[row_index].count do
-      if src[row_index][element_index].class == STRING 
+      if src[row_index][element_index].class == String 
+        joined_string_array.push(src[row][element_index])
+      end
+      element_index += 1
     end
+    row_index += 1
   end
+  final_string = joined_string_array.join(" ")
+  final_string
 end
